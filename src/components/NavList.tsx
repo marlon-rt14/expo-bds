@@ -1,9 +1,13 @@
 import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
 
+import { Checkbox } from './Checkbox';
+
 export interface NavListItem {
   key: string;
   label: string;
   onPress: () => void;
+  // Without onToggle the checkbox is rendered disabled (read-only).
+  checkbox?: { checked: boolean; onToggle?: () => void };
 }
 
 interface NavListProps {
@@ -23,7 +27,16 @@ export function NavList({ items }: NavListProps) {
           onPress={item.onPress}
           style={({ pressed }) => [styles.row, pressed && styles.rowPressed]}
         >
-          <Text style={styles.label}>{item.label}</Text>
+          <View style={styles.leading}>
+            {item.checkbox && (
+              <Checkbox
+                checked={item.checkbox.checked}
+                onToggle={item.checkbox.onToggle}
+                disabled={!item.checkbox.onToggle}
+              />
+            )}
+            <Text style={styles.label}>{item.label}</Text>
+          </View>
           <Text style={styles.chevron}>›</Text>
         </Pressable>
       )}
@@ -46,6 +59,11 @@ const styles = StyleSheet.create({
   },
   rowPressed: {
     backgroundColor: '#f2f2f2',
+  },
+  leading: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
   },
   label: {
     fontSize: 16,
