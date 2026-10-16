@@ -1,0 +1,1 @@
+export { LegendScreen } from './LegendScreen';

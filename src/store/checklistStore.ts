@@ -7,11 +7,6 @@ interface ChecklistState {
   toggle: (key: string) => void;
 }
 
-// Keys are scoped by section so names never collide across Components/Charts/Patterns.
-export function componentKey(sectionId: string, name: string): string {
-  return `${sectionId}/${name}`;
-}
-
 export const useChecklistStore = create<ChecklistState>()(
   persist(
     (set) => ({

@@ -1,11 +1,8 @@
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { getGroup, getSection } from '../catalog/catalog';
-import { ComponentScreen } from '../screens/ComponentScreen';
-import { GroupScreen } from '../screens/GroupScreen';
-import { HomeScreen } from '../screens/HomeScreen';
-import { SectionScreen } from '../screens/SectionScreen';
+import { allComponents, getGroup, getSection } from '../catalog';
+import { componentScreens, GroupScreen, HomeScreen, SectionScreen } from '../screens';
 import type { RootStackParamList } from './types';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -27,11 +24,9 @@ export function RootNavigator() {
             title: getGroup(route.params.sectionId, route.params.groupId)?.title ?? '',
           })}
         />
-        <Stack.Screen
-          name="Component"
-          component={ComponentScreen}
-          options={({ route }) => ({ title: route.params.name })}
-        />
+        {allComponents.map(({ key, name }) => (
+          <Stack.Screen key={key} name={key} component={componentScreens[key]} options={{ title: name }} />
+        ))}
       </Stack.Navigator>
     </NavigationContainer>
   );

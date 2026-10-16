@@ -1,7 +1,7 @@
-import { getSection } from '../catalog/catalog';
-import { NavList } from '../components/NavList';
-import type { RootStackScreenProps } from '../navigation/types';
-import { componentKey, useChecklistStore } from '../store/checklistStore';
+import { componentKey, getSection } from '../catalog';
+import { NavList } from '../components';
+import type { RootStackScreenProps } from '../navigation';
+import { useChecklistStore } from '../store';
 
 export function SectionScreen({ navigation, route }: RootStackScreenProps<'Section'>) {
   const checked = useChecklistStore((state) => state.checked);
@@ -25,7 +25,7 @@ export function SectionScreen({ navigation, route }: RootStackScreenProps<'Secti
           return {
             key: name,
             label: name,
-            onPress: () => navigation.navigate('Component', { name }),
+            onPress: () => navigation.navigate(key),
             checkbox: { checked: !!checked[key], onToggle: () => toggle(key) },
           };
         });

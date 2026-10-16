@@ -1,6 +1,6 @@
-import { catalog } from '../catalog/catalog';
-import { NavList } from '../components/NavList';
-import type { RootStackScreenProps } from '../navigation/types';
+import { catalog } from '../catalog';
+import { NavList } from '../components';
+import type { RootStackScreenProps } from '../navigation';
 
 export function HomeScreen({ navigation }: RootStackScreenProps<'Home'>) {
   return (

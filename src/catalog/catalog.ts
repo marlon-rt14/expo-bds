@@ -171,3 +171,20 @@ export function getGroup(sectionId: string, groupId: string): CatalogGroup | und
   if (section?.kind !== 'groups') return undefined;
   return section.groups.find((group) => group.id === groupId);
 }
+
+// Unique id of a component across sections; also used as its stack route name.
+export type ComponentKey = `${string}/${string}`;
+
+export function componentKey(sectionId: string, name: string): ComponentKey {
+  return `${sectionId}/${name}`;
+}
+
+export interface CatalogComponent {
+  key: ComponentKey;
+  name: string;
+}
+
+export const allComponents: CatalogComponent[] = catalog.flatMap((section) => {
+  const names = section.kind === 'groups' ? section.groups.flatMap((group) => group.components) : section.components;
+  return names.map((name) => ({ key: componentKey(section.id, name), name }));
+});
