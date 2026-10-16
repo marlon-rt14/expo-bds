@@ -1,13 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import {StatusBar} from "expo-status-bar";
+import {SafeAreaProvider} from "react-native-safe-area-context";
 
-import { RootNavigator } from './src/navigation/RootNavigator';
+import {RootNavigator} from "./src/navigation/RootNavigator";
+import {BdsProvider} from "@bds/react-native";
 
 export default function App() {
   return (
-    <SafeAreaProvider>
-      <RootNavigator />
-      <StatusBar style="auto" />
-    </SafeAreaProvider>
+    <BdsProvider>
+      <SafeAreaProvider>
+        <RootNavigator />
+        <StatusBar style="auto" />
+      </SafeAreaProvider>
+    </BdsProvider>
   );
 }
