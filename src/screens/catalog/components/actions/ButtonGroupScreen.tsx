@@ -1,5 +1,16 @@
-import { ComponentPlayground } from '../../../../components';
+import {Button, ButtonGroup} from "@bds/react-native";
+import {ComponentPlayground} from "../../../../components";
+import {View} from "react-native";
 
 export function ButtonGroupScreen() {
-  return <ComponentPlayground name="ButtonGroup" />;
+  return (
+    <ComponentPlayground name="ButtonGroup">
+      <View style={{borderWidth: 1}}>
+        <ButtonGroup layout="fitted" orientation="horizontal">
+          <Button label="Hola" onPress={() => {}} />
+          <Button label="Mundo" onPress={() => {}} />
+        </ButtonGroup>
+      </View>
+    </ComponentPlayground>
+  );
 }
