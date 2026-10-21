@@ -13,10 +13,10 @@ importers:
     dependencies:
       '@bds/react-native':
         specifier: file:/tmp/bds-lib/bds-react-native-0.0.0.tgz
-        version: file:../../../../../../tmp/bds-lib/bds-react-native-0.0.0.tgz(expo-haptics@58.0.7(expo@58.0.13))(react-native-svg@15.16.0(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.3.0)(react@19.3.0)(supports-color@8.1.1))(react@19.3.0))(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.3.0)(react@19.3.0)(supports-color@8.1.1))(react@19.3.0)
+        version: file:../../../../../tmp/bds-lib/bds-react-native-0.0.0.tgz(expo-haptics@58.0.7(expo@58.0.13))(react-native-svg@15.16.0(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.3.0)(react@19.3.0)(supports-color@8.1.1))(react@19.3.0))(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.3.0)(react@19.3.0)(supports-color@8.1.1))(react@19.3.0)
       '@bds/tokens':
         specifier: file:/tmp/bds-lib/bds-tokens-0.0.0.tgz
-        version: file:../../../../../../tmp/bds-lib/bds-tokens-0.0.0.tgz
+        version: file:../../../../../tmp/bds-lib/bds-tokens-0.0.0.tgz
       '@react-native-async-storage/async-storage':
         specifier: 2.2.0
         version: 2.2.0(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.3.0)(react@19.3.0)(supports-color@8.1.1))
@@ -50,6 +50,9 @@ importers:
       react-native-screens:
         specifier: ~4.30.0
         version: 4.30.0(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.3.0)(react@19.3.0)(supports-color@8.1.1))(react@19.3.0)
+      react-native-svg:
+        specifier: 15.16.0
+        version: 15.16.0(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.3.0)(react@19.3.0)(supports-color@8.1.1))(react@19.3.0)
       zustand:
         specifier: ^5.0.15
         version: 5.0.15(@types/react@19.3.0)(react@19.3.0)(use-sync-external-store@1.7.0(react@19.3.0))
@@ -421,17 +424,26 @@ packages:
     resolution: {integrity: sha512-Vj1jF3cPfxg7OAfoI7QnVKLoILlm2JF9pnVHrX8qx7AHMiYWT+NDAA7jChlNgRS4WTLc/fD1lXLmPixluj+3Gg==}
     engines: {node: '>=6.9.0'}
 
-  '@bds/react-native@file:../../../../../../tmp/bds-lib/bds-react-native-0.0.0.tgz':
-    resolution: {integrity: sha512-hGv9Adb6/zdt5LacFbh6QPBxGajzStfdA/vSUqOtWHW/kGgaLuTOm8fFO5xQe+E0yBuMu/43D7kEGldRYJSSDw==, tarball: file:../../../../../../tmp/bds-lib/bds-react-native-0.0.0.tgz}
+  '@bds/react-native@file:../../../../../tmp/bds-lib/bds-react-native-0.0.0.tgz':
+    resolution: {integrity: sha512-yIOJ5NrPmsIFmQddIVviYJi7rcq/GSb0ODwz0PC8S5OEtYJyXOymDYgPdnqjR3mdAgLlqu8XNTlwchrxUtGcLw==, tarball: file:../../../../../tmp/bds-lib/bds-react-native-0.0.0.tgz}
     version: 0.0.0
     peerDependencies:
+      '@expo/ui': '>=58.0.21'
+      '@react-native-community/slider': '>=4.5'
+      expo-glass-effect: '>=0.1'
       expo-haptics: '>=14'
       react: '>=19'
       react-dom: '>=19'
-      react-native: '>=0.80'
+      react-native: '>=0.88'
       react-native-svg: '>=15'
       react-native-web: '>=0.21'
     peerDependenciesMeta:
+      '@expo/ui':
+        optional: true
+      '@react-native-community/slider':
+        optional: true
+      expo-glass-effect:
+        optional: true
       expo-haptics:
         optional: true
       react-dom:
@@ -439,8 +451,8 @@ packages:
       react-native-web:
         optional: true
 
-  '@bds/tokens@file:../../../../../../tmp/bds-lib/bds-tokens-0.0.0.tgz':
-    resolution: {integrity: sha512-Fblt2H4DgxWJgIsiDrLgxkd534OGRbwM9a8AIe2CP+1aIB/4ExEp6AbHcy/e642h3Z5VlSkCZmu+LSNPjJI+eQ==, tarball: file:../../../../../../tmp/bds-lib/bds-tokens-0.0.0.tgz}
+  '@bds/tokens@file:../../../../../tmp/bds-lib/bds-tokens-0.0.0.tgz':
+    resolution: {integrity: sha512-M34+qLnVz2ig5laj3u9xWwB6P0utYNyIAQJPvpG66BMk1CcncIO4UHZcJk+S2TsBbitWbzVmUcct4o/3nK4zqg==, tarball: file:../../../../../tmp/bds-lib/bds-tokens-0.0.0.tgz}
     version: 0.0.0
 
   '@expo/cli@58.1.10':
@@ -2762,16 +2774,16 @@ snapshots:
       '@babel/helper-string-parser': 7.29.7
       '@babel/helper-validator-identifier': 7.29.7
 
-  '@bds/react-native@file:../../../../../../tmp/bds-lib/bds-react-native-0.0.0.tgz(expo-haptics@58.0.7(expo@58.0.13))(react-native-svg@15.16.0(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.3.0)(react@19.3.0)(supports-color@8.1.1))(react@19.3.0))(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.3.0)(react@19.3.0)(supports-color@8.1.1))(react@19.3.0)':
+  '@bds/react-native@file:../../../../../tmp/bds-lib/bds-react-native-0.0.0.tgz(expo-haptics@58.0.7(expo@58.0.13))(react-native-svg@15.16.0(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.3.0)(react@19.3.0)(supports-color@8.1.1))(react@19.3.0))(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.3.0)(react@19.3.0)(supports-color@8.1.1))(react@19.3.0)':
     dependencies:
-      '@bds/tokens': file:../../../../../../tmp/bds-lib/bds-tokens-0.0.0.tgz
+      '@bds/tokens': file:../../../../../tmp/bds-lib/bds-tokens-0.0.0.tgz
       react: 19.3.0
       react-native: 0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.3.0)(react@19.3.0)(supports-color@8.1.1)
       react-native-svg: 15.16.0(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.3.0)(react@19.3.0)(supports-color@8.1.1))(react@19.3.0)
     optionalDependencies:
       expo-haptics: 58.0.7(expo@58.0.13)
 
-  '@bds/tokens@file:../../../../../../tmp/bds-lib/bds-tokens-0.0.0.tgz': {}
+  '@bds/tokens@file:../../../../../tmp/bds-lib/bds-tokens-0.0.0.tgz': {}
 
   '@expo/cli@58.1.10(@expo/dom-webview@58.0.2)(expo-constants@58.0.12(expo@58.0.13)(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.3.0)(react@19.3.0)(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(expo-font@58.0.8(expo@58.0.13)(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.3.0)(react@19.3.0)(supports-color@8.1.1))(react@19.3.0))(expo@58.0.13)(react-native@0.88.0(@babel/core@7.29.7(supports-color@8.1.1))(@types/react@19.3.0)(react@19.3.0)(supports-color@8.1.1))(react@19.3.0)(supports-color@8.1.1)(typescript@6.0.3)':
     dependencies:
@@ -3050,7 +3062,7 @@ snapshots:
       metro-resolver: 0.87.1
       metro-runtime: 0.87.1
       metro-source-map: 0.87.1(supports-color@8.1.1)
-      metro-symbolicate: 0.87.1
+      metro-symbolicate: 0.87.1(supports-color@8.1.1)
       metro-transform-plugins: 0.87.1(supports-color@8.1.1)
       metro-transform-worker: 0.87.1(supports-color@8.1.1)
     transitivePeerDependencies:
@@ -4195,7 +4207,7 @@ snapshots:
       '@babel/types': 7.29.8
       flow-enums-runtime: 0.0.6
       invariant: 2.2.4
-      metro-symbolicate: 0.87.1
+      metro-symbolicate: 0.87.1(supports-color@8.1.1)
       nullthrows: 1.1.1
       ob1: 0.87.1
       source-map: 0.5.7
@@ -4203,7 +4215,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  metro-symbolicate@0.87.1:
+  metro-symbolicate@0.87.1(supports-color@8.1.1):
     dependencies:
       flow-enums-runtime: 0.0.6
       invariant: 2.2.4
@@ -4211,6 +4223,8 @@ snapshots:
       nullthrows: 1.1.1
       source-map: 0.5.7
       vlq: 1.0.1
+    transitivePeerDependencies:
+      - supports-color
 
   metro-transform-plugins@0.87.1(supports-color@8.1.1):
     dependencies:
@@ -4272,7 +4286,7 @@ snapshots:
       metro-resolver: 0.87.1
       metro-runtime: 0.87.1
       metro-source-map: 0.87.1(supports-color@8.1.1)
-      metro-symbolicate: 0.87.1
+      metro-symbolicate: 0.87.1(supports-color@8.1.1)
       metro-transform-plugins: 0.87.1(supports-color@8.1.1)
       metro-transform-worker: 0.87.1(supports-color@8.1.1)
       mime-types: 3.0.2
