@@ -1,11 +1,12 @@
 import { componentKey, getSection } from '../catalog';
 import { NavList } from '../components';
 import type { RootStackScreenProps } from '../navigation';
-import { useChecklistStore } from '../store';
+import { useChecklistStore, useChecklistSync } from '../store';
 
 export function SectionScreen({ navigation, route }: RootStackScreenProps<'Section'>) {
   const checked = useChecklistStore((state) => state.checked);
   const toggle = useChecklistStore((state) => state.toggle);
+  useChecklistSync();
 
   const section = getSection(route.params.sectionId);
   if (!section) return null;
