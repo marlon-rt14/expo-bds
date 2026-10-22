@@ -5,8 +5,8 @@ import {Text, View} from "react-native";
 export function CardScreen() {
   return (
     <ComponentPlayground name="Card">
-      <View>
-        <Card elevation="flat" padding="none">
+      <View style={{backgroundColor: 'transparent', width: "100%", flex: 1}}>
+        <Card elevation="raised" onPress={() => console.log("click")}>
           <View>
             <Button label="Clic me" onPress={() => console.log("click")} />
             <Text>Lorem ipsum dolor sit amet</Text>
