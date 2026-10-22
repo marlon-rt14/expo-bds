@@ -1,6 +1,13 @@
 [
+  "components/Alert",
   "components/Button",
   "components/ButtonGroup",
+  "components/Callout",
+  "components/EmptyState",
   "components/FloatingActionButton",
-  "components/IconButton"
+  "components/IconButton",
+  "components/ProgressBar",
+  "components/ResultState",
+  "components/Snackbar",
+  "components/SnackbarStack"
 ]
