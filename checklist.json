@@ -1,6 +1,8 @@
 [
+  "components/Accordion",
+  "components/AccordionItem",
   "components/Button",
   "components/ButtonGroup",
-  "components/FloatingActionButton",
-  "components/IconButton"
+  "components/IconButton",
+  "components/LinkButton"
 ]
