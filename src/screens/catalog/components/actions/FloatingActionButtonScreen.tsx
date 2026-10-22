@@ -21,6 +21,7 @@ export function FloatingActionButtonScreen() {
         <FloatingActionButton
           label="Hola mundo"
           icon="plus"
+          art={undefined}
           onPress={() => {}}
         />
       </View>
