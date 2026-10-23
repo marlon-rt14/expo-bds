@@ -1,6 +1,7 @@
 [
   "components/Accordion",
   "components/AccordionItem",
+  "components/Amount",
   "components/Button",
   "components/ButtonGroup",
   "components/Carousel",
