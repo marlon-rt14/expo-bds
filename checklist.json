@@ -5,6 +5,7 @@
   "components/Avatar",
   "components/AvatarGroup",
   "components/AvatarIndicator",
+  "components/Badge",
   "components/Button",
   "components/ButtonGroup",
   "components/Carousel",
