@@ -13,5 +13,6 @@
   "components/IconButton",
   "components/LinkButton",
   "components/MerchantAvatar",
-  "components/Tag"
+  "components/Tag",
+  "components/TagGroup"
 ]
