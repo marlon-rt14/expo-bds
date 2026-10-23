@@ -4,6 +4,7 @@
   "components/Amount",
   "components/Avatar",
   "components/AvatarGroup",
+  "components/AvatarIndicator",
   "components/Button",
   "components/ButtonGroup",
   "components/Carousel",
