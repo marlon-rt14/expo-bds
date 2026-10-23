@@ -11,5 +11,6 @@
   "components/Carousel",
   "components/Expansion",
   "components/IconButton",
-  "components/LinkButton"
+  "components/LinkButton",
+  "components/MerchantAvatar"
 ]
