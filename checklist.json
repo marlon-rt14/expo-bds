@@ -3,6 +3,7 @@
   "components/AccordionItem",
   "components/Amount",
   "components/Avatar",
+  "components/AvatarGroup",
   "components/Button",
   "components/ButtonGroup",
   "components/Carousel",
