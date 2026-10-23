@@ -11,4 +11,4 @@ minimumReleaseAgeExclude:
   - expo@58.0.13
   - expo-haptics@58.0.7
 overrides:
-  "@bds/tokens": "file:/tmp/bds-lib/bds-tokens-0.0.0.tgz"
+  "@bds/tokens": "file:/tmp/bds-lib/bds-tokens-0.1.0.tgz"
