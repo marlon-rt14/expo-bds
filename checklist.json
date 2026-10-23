@@ -12,5 +12,6 @@
   "components/Expansion",
   "components/IconButton",
   "components/LinkButton",
-  "components/MerchantAvatar"
+  "components/MerchantAvatar",
+  "components/Tag"
 ]
