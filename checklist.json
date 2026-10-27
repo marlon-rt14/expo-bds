@@ -2,6 +2,11 @@
   "components/Accordion",
   "components/AccordionItem",
   "components/Alert",
+  "components/Amount",
+  "components/Avatar",
+  "components/AvatarGroup",
+  "components/AvatarIndicator",
+  "components/Badge",
   "components/Button",
   "components/ButtonGroup",
   "components/Callout",
@@ -10,8 +15,11 @@
   "components/Expansion",
   "components/IconButton",
   "components/LinkButton",
+  "components/MerchantAvatar",
   "components/ProgressBar",
   "components/ResultState",
   "components/Snackbar",
-  "components/SnackbarStack"
+  "components/SnackbarStack",
+  "components/Tag",
+  "components/TagGroup"
 ]
