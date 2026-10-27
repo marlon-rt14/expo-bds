@@ -110,6 +110,7 @@ import {
   SignInFormScreen,
   SupportContactScreen,
 } from './patterns';
+import { PaymentScreen } from './demos';
 
 export const componentScreens: Record<ComponentKey, ComponentType> = {
   'components/Button': ButtonScreen,
@@ -214,4 +215,5 @@ export const componentScreens: Record<ComponentKey, ComponentType> = {
   'patterns/PhotoGuidelines': PhotoGuidelinesScreen,
   'patterns/SignInForm': SignInFormScreen,
   'patterns/SupportContact': SupportContactScreen,
+  'demos/PaymentScreen': PaymentScreen,
 };

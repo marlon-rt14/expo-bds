@@ -7,9 +7,16 @@ export interface CatalogGroup {
   components: string[];
 }
 
+interface CatalogSectionBase {
+  id: string;
+  title: string;
+  // Sections tracked in the QA checklist show checkboxes. Defaults to true.
+  checklist?: boolean;
+}
+
 export type CatalogSection =
-  | { id: string; title: string; kind: 'groups'; groups: CatalogGroup[] }
-  | { id: string; title: string; kind: 'components'; components: string[] };
+  | (CatalogSectionBase & { kind: 'groups'; groups: CatalogGroup[] })
+  | (CatalogSectionBase & { kind: 'components'; components: string[] });
 
 export const catalog: CatalogSection[] = [
   {
@@ -159,6 +166,13 @@ export const catalog: CatalogSection[] = [
       'SignInForm',
       'SupportContact',
     ],
+  },
+  {
+    id: 'demos',
+    title: 'Demos',
+    kind: 'components',
+    checklist: false,
+    components: ['PaymentScreen'],
   },
 ];
 

@@ -1,4 +1,4 @@
-import { componentKey, getGroup } from '../catalog';
+import { componentKey, getGroup, getSection } from '../catalog';
 import { NavList } from '../components';
 import type { RootStackScreenProps } from '../navigation';
 import { useChecklistStore, useChecklistSync } from '../store';
@@ -11,6 +11,7 @@ export function GroupScreen({ navigation, route }: RootStackScreenProps<'Group'>
   const { sectionId, groupId } = route.params;
   const group = getGroup(sectionId, groupId);
   if (!group) return null;
+  const withChecklist = getSection(sectionId)?.checklist !== false;
 
   return (
     <NavList
@@ -20,7 +21,7 @@ export function GroupScreen({ navigation, route }: RootStackScreenProps<'Group'>
           key: name,
           label: name,
           onPress: () => navigation.navigate(key),
-          checkbox: { checked: !!checked[key], onToggle: () => toggle(key) },
+          checkbox: withChecklist ? { checked: !!checked[key], onToggle: () => toggle(key) } : undefined,
         };
       })}
     />
