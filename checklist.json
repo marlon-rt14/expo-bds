@@ -10,6 +10,7 @@
   "components/ButtonGroup",
   "components/Carousel",
   "components/Checkbox",
+  "components/Chip",
   "components/Expansion",
   "components/FloatingActionButton",
   "components/IconButton",
