@@ -12,6 +12,7 @@
   "components/Expansion",
   "components/FloatingActionButton",
   "components/IconButton",
+  "components/Image",
   "components/LinkButton",
   "components/MerchantAvatar",
   "components/Tag",
