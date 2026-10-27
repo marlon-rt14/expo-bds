@@ -10,6 +10,7 @@
   "components/ButtonGroup",
   "components/Carousel",
   "components/Expansion",
+  "components/FloatingActionButton",
   "components/IconButton",
   "components/LinkButton",
   "components/MerchantAvatar",
