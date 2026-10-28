@@ -24,8 +24,13 @@ export function RootNavigator() {
             title: getGroup(route.params.sectionId, route.params.groupId)?.title ?? '',
           })}
         />
-        {allComponents.map(({ key, name }) => (
-          <Stack.Screen key={key} name={key} component={componentScreens[key]} options={{ title: name }} />
+        {allComponents.map(({ key, name, ownHeader }) => (
+          <Stack.Screen
+            key={key}
+            name={key}
+            component={componentScreens[key]}
+            options={{ title: name, headerShown: !ownHeader }}
+          />
         ))}
       </Stack.Navigator>
     </NavigationContainer>

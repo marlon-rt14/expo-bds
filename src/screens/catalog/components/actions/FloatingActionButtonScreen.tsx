@@ -8,7 +8,7 @@ export function FloatingActionButtonScreen() {
     <ComponentPlayground name="FloatingActionButton">
       <View style={{borderWidth: 1, width: "100%", flex: 1}}>
         <Host style={{flex: 1}}>
-          <ScrollView >
+          <ScrollView>
             <Text>Hola mundo</Text>
             <Text>
               lorem ipsum dolor sit amet consectetur adipiscing elit sed do
@@ -21,7 +21,11 @@ export function FloatingActionButtonScreen() {
         <FloatingActionButton
           label="Hola mundo"
           icon="plus"
-          art={undefined}
+          art={
+            <View
+              style={{width: 20, height: 20, backgroundColor: "red"}}
+            ></View>
+          }
           onPress={() => {}}
         />
       </View>

@@ -7,9 +7,18 @@ export interface CatalogGroup {
   components: string[];
 }
 
+interface CatalogSectionBase {
+  id: string;
+  title: string;
+  // Sections tracked in the QA checklist show checkboxes. Defaults to true.
+  checklist?: boolean;
+  // Screens draw their own header (bDS NavigationBar), so the stack header is hidden. Defaults to false.
+  ownHeader?: boolean;
+}
+
 export type CatalogSection =
-  | { id: string; title: string; kind: 'groups'; groups: CatalogGroup[] }
-  | { id: string; title: string; kind: 'components'; components: string[] };
+  | (CatalogSectionBase & { kind: 'groups'; groups: CatalogGroup[] })
+  | (CatalogSectionBase & { kind: 'components'; components: string[] });
 
 export const catalog: CatalogSection[] = [
   {
@@ -160,6 +169,14 @@ export const catalog: CatalogSection[] = [
       'SupportContact',
     ],
   },
+  {
+    id: 'demos',
+    title: 'Demos',
+    kind: 'components',
+    checklist: false,
+    ownHeader: true,
+    components: ['PaymentScreen'],
+  },
 ];
 
 export function getSection(sectionId: string): CatalogSection | undefined {
@@ -182,9 +199,10 @@ export function componentKey(sectionId: string, name: string): ComponentKey {
 export interface CatalogComponent {
   key: ComponentKey;
   name: string;
+  ownHeader: boolean;
 }
 
 export const allComponents: CatalogComponent[] = catalog.flatMap((section) => {
   const names = section.kind === 'groups' ? section.groups.flatMap((group) => group.components) : section.components;
-  return names.map((name) => ({ key: componentKey(section.id, name), name }));
+  return names.map((name) => ({ key: componentKey(section.id, name), name, ownHeader: !!section.ownHeader }));
 });
