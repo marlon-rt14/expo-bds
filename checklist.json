@@ -17,6 +17,7 @@
   "components/Image",
   "components/LinkButton",
   "components/MerchantAvatar",
+  "components/SegmentedControl",
   "components/Tag",
   "components/TagGroup"
 ]
