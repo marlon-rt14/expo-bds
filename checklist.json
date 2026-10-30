@@ -46,6 +46,7 @@
   "components/SearchField",
   "components/SegmentedControl",
   "components/Select",
+  "components/Skeleton",
   "components/Snackbar",
   "components/SnackbarStack",
   "components/Step",
