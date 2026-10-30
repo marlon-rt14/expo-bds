@@ -49,6 +49,7 @@
   "components/Skeleton",
   "components/Snackbar",
   "components/SnackbarStack",
+  "components/Spinner",
   "components/Step",
   "components/SwitchGroup",
   "components/SwitchItem",
