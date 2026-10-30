@@ -24,6 +24,7 @@
   "components/EmptyState",
   "components/Expansion",
   "components/FloatingActionButton",
+  "components/Icon",
   "components/IconButton",
   "components/Image",
   "components/KeyboardAccessory",
