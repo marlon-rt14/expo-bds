@@ -57,5 +57,6 @@
   "components/Tabs",
   "components/Tag",
   "components/TagGroup",
+  "components/Text",
   "components/TextField"
 ]
